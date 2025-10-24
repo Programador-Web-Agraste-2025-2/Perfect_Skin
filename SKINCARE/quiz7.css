@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #28211E;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 3rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.btn {
+  background: linear-gradient(135deg, #DF7E7A, #B76A66, #8F5553);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  width: 460px;
+  height: 75px;
+  color: #fff;
+  margin: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-style: oblique;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(223, 126, 122, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #E28B86, #C07570, #9A5E5A);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(223, 126, 122, 0.6);
+}
+
+header {
+  margin-top: 5px;
+}
+
+header hr {
+  width: 100vw;
+  margin-left: calc(-1 * 3rem);
+  height: 3px;
+  background-color: #fff;
+  border: none;
+}
+
+.titulo {
+  color: #fff;
+  font-size: 1.25rem;
+  transform: translateY(-10px);
+}
+
+footer.prx {
+  display: flex;
+  flex-direction: column; /* empilha bolinhas e botão */
+  align-items: center;
+  gap: 20px;              /* espaço entre bolinhas e botão */
+  margin-top: auto;
+  background: transparent;
+}
+
+#proximo {
+  background: linear-gradient(50deg, #DF7E7A, #B76A66, #8F5553);
+  border-radius: 300px;
+  border: 0;
+  padding: 0.6rem 1.5rem;
+  color: #fff;
+  height: 40px;
+  width: 150px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#proximo:hover {
+  transform: translateY(-3px);
+  transition: 0.5s ease;
+}
+
+.perguntas {
+  gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(90px);
+}
+
+.logo {
+  margin-top: -40px;
+  width: 550px;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+hr {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 0 7rem;
+  left: 0;
+}
+
+#pg {
+  display: flex;
+  justify-content: center;
+  text-size-adjust: 4rem;
+}
+
+#selecione {
+  display: flex;
+  justify-content: center;
+}
+
+.bolinhas {
+  position: fixed;
+  bottom: 100px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bolinha1 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, #8F5553, #DF7E7A, #E9BFA8);
+  box-shadow: 0 0 6px #DF7E7A;
+}
+
+.empty{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #28211E;   
+  border: 1px solid #000000; 
+}
+
+      
+.titulo h2{
+  font-weight: 500;
+}
+
+
