@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before
+*::after {box-sizing: border-box;}
+
+
+
+body{
+    background: linear-gradient(90deg, #000000, #120F62);
+    margin: 0; 
+    text-align: center;
+    font-family: "Poppins", sans-serif;      
+    display: flex;            
+    flex-direction: column;
+    overflow: scroll;
+    min-height: 90vh;
+  }
+
+
+header{
+    width: 100%;
+    height: 200px;
+    background: transparent;
+    padding-bottom: 1rem;
+}
+
+.pergunta{
+    color: #fff;
+    font-size: 5rem;
+    font-style: oblique;
+}
+
+
+.opc {
+    background: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 200px;
+    cursor: pointer;
+    font-size: 2.4rem;
+    transition: background 0.3s ease;
+    width: 500px;
+    height: 100px;
+    color: #000;
+    margin: 1rem;
+    font-weight: 700;
+  }
+
+.opc:focus {
+    transform: translateY(-3px);
+    background: linear-gradient(50deg, #ffffff, #120F62);
+    transition: 0.3s ease;
+    border: none ;
+    color: #ffffff;
+    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.4),
+                0 0 15px 4px rgba(255, 255, 255, 0.25);
+  }
+
+.opcao{
+    transform: translateY(130px);
+}
+
+#next{
+    border-radius: 30px;
+    color: #fff;
+    background: #000;
+    border: none;
+    width: 250px;
+    height: 60px;
+    font-size: 1.6rem;
+}
+
+#next:hover{
+    transform: translateY(-3px);
+    transition: 0.2s ease;
+    border: 2px solid #fff;
+    background: transparent;
+}
+
+
+footer.prx {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto; 
+    background: transparent; 
+  }
