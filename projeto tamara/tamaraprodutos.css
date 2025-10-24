@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
+html, body{
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+  }
+  
+  .galeria-container {
+    padding: 20px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 80%; /* ocupa 80% da largura da tela */
+    padding: 2rem; /* padding relativo ao tamanho da fonte */
+  }
+  
+  .subtitulo {
+    color: #c4c4c4;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .barra-titulo {
+    background-color: #2e2320;
+    height: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .produtos-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    cursor: pointer;
+  }
+
+@media(max-width: 1200px){
+    .produtos-grid{grid-template-columns: repeat(4, 1fr);}
+}
+
+@media(max-width: 992px){
+    .produtos-grid{grid-template-columns: repeat(3, 1fr);}
+}
+
+@media(max-width: 680px){
+    .produtos-grid{grid-template-columns: repeat(2, 1fr);}
+}
+
+@media(max-width: 420px){
+    .produtos-grid{grid-template-columns: repeat 1fr;}
+}
+  
+  .produto {
+    background-color: #e3c4b6;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    border: 2px double #6b4b3e; /* exemplo de borda com estilo */
+  }
+  
+  .produto img {
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    object-fit: cover;  /* preenche sem distorcer */
+    object-position: center;
+  }
+  
+  .produto p {
+    background: linear-gradient(#DF7E7A, #B76A66) ;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 6px 10px;
+    border-radius: 15px;
+    margin: 0;
+  }
+  
+  .produto:hover {
+    transform: translateY(-6px);  /* efeito de elevação */
+    box-shadow: 0 14px 32px rgba(2, 8, 23, 0.15);
+  }
+  
+  .container {
+    width: 80%; /* ocupa 80% da largura da tela */
+    padding: 2rem; /* padding relativo ao tamanho da fonte */
+  }
