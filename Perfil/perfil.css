@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -88,7 +87,6 @@ body {
   color: #fff;
   cursor: pointer;
 }
-
 .info-perfil h2 {
   color: #ff4f4f;
 }
@@ -126,7 +124,7 @@ body {
 }
 
 .card h4 {
-  color: #ff4f4f;
+  color: #ba4545;
   margin-bottom: 10px;
 }
 
@@ -136,4 +134,64 @@ body {
   background: #1f1f1f;
   color: #fff;
   margin-top: 50px;
+}
+.img-container {
+  position: relative;
+  margin-top: 25px; 
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.img-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+  border-radius: 15px;
+}
+
+.img-container:hover img {
+  transform: scale(1.05);
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.analisar-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.btn-analisar {
+  background: linear-gradient(90deg, #E5BDAD, #bf4819d7);
+  border: none;
+  color: white;
+  padding: 22px 60px;
+  border-radius: 50px;
+  font-size: 1.3rem; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(180, 71, 107, 0.4);
+}
+
+.btn-analisar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(146, 35, 72, 0.6);
+}
+
+.btn-analisar:active {
+  transform: scale(0.95);
+  background: linear-gradient(90deg, #923d59, #641222);
 }

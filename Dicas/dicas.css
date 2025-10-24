@@ -89,7 +89,26 @@
   .tip-card:hover {
     transform: translateY(-5px);
   }
+  .tip-card {
+    position: relative;
+    overflow: hidden;
+  }
   
+  .tip-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 70%, rgba(71, 47, 47, 0.032));
+    pointer-events: none;
+  }
+  .tip-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-top: 50px;
+    border-radius: 50px;
+    display: block;
+  }
   .tip-card img {
     width: 100%;
     height: 180px;
@@ -128,3 +147,4 @@
       justify-content: center;
     }
   }
+ 
