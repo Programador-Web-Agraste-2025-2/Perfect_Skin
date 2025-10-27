@@ -166,9 +166,15 @@ body{
     text-align: center;
 }
 
+.avlmedia{ 
+    margin-top: 1.4rem;
+}
 
-
-
+.ref{
+    margin: 10px;
+    margin-top: 0.5rem;
+    font-size: 15px;
+}
 
 
 /* Responsividade */
