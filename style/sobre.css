@@ -28,6 +28,13 @@ body{
 
 
 /* Cabeçalho */
+
+.sob:hover{
+    transform: scale(1.04);
+    filter: brightness(1.04);
+    transition: all 0.4s ease-in-out;
+}
+
 .sobrenosimg{
     width: 100%;
     height: 160px;
@@ -81,6 +88,17 @@ body{
     text-align: justify;
     text-indent: 1rem;
     color: var(--cor-secundaria);
+}
+
+
+.hv:hover{
+    transform: scale(1.03);
+    filter: brightness(1.05);
+    transition: all 0.4s ease-in-out;
+}
+
+.um:hover{
+    box-shadow: 0 0 10px rgba(128, 78, 70, 0.247);
 }
 
 /*  Titulo com destaque e separado lado a lado*/
@@ -162,6 +180,7 @@ body{
     max-width: 86%;
     display: flex;
     overflow-x: auto;
+    mask-image: linear-gradient(to right, transparent, black 10px, black 95%, transparent 100%);
 }
 
 
@@ -173,10 +192,11 @@ body{
 }
 
 .comentario .bfundo{
+    margin-left: 6px;
     min-width: 320px;
     height: 170px;
     background: linear-gradient(#EBC7B8, #DE908D);
-    margin-right: 10px;
+    margin-right: 8px;
     border-radius: 23px;
 }
 
@@ -267,6 +287,16 @@ body{
     border: solid 3px var(--cor-primaria);
     border-radius: 50%;
 }
+
+.separar:hover{
+    transform: scale(1.15);
+    transition: all 0.4s ease-in-out;
+}
+
+.separar:hover .primg{
+    box-shadow: 0 0 15px rgba(82, 44, 39, 0.377);
+}
+
 
 
 /* Responsividade */
