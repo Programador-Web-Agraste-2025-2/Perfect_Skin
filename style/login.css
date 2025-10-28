@@ -8,11 +8,15 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-html,body,main{
+html,body{
     height: 100vh;
     min-height: 600px;
-    width: 100vw;
     overflow-x: hidden;
+}
+
+main{
+    height: 100vh;
+    min-height: 600px;
 }
 
 /* Váriaveis*/
@@ -44,13 +48,13 @@ html,body,main{
 }
 
 #caseimglogin{
-    background-image: url('/img/img_Login.jpg');}
+    background-image: url('../img/imagem_login/img_Login.jpg');}
 
 #caseimgcadastro{
-    background-image: url('/img/img_cadastro.jpg');}
+    background-image: url('../img/imagem_login/img_cadastro.jpg');}
 
 #caseimg2{
-    background-image: url('/img/img_Login_2.jpg');
+    background-image: url('../img/imagem_login/img_Login_2.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -167,16 +171,16 @@ input[type=submit]:hover{transform: scale(110%);}
 label{display: none;}
 .cadastro{label{display: inline;}}
 
+.material-google{
+    color: #000000;
+    float: right;
+    margin: 10px;
+}
 
 #accessibility{
-    position: relative;
-    top: 95%;
-    left: 25%;
-    width:20px;
-    height: 20px;
-    /*
-    background-color: rgba(0, 0, 255, 0.445);
-    */
+    position: absolute;    
+    top: calc(100vh - 50px);
+    right: 10px;
     border: 2px solid #000000 ;
     border-radius: 50%;
     fill: black;
@@ -229,11 +233,11 @@ label{display: none;}
     }
     
     .cadastro{
-        background-image:  url('img/img_cadastro_mobile.jpg');
+        background-image:  url('../img/imagem_login/img_cadastro_mobile.jpg');
     }
 
     .login{
-        background-image:  url('img/img_login_mobile.jpg');
+        background-image:  url('../img/imagem_login/img_login_mobile.jpg');
     }
 
 
