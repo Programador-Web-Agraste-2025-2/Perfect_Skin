@@ -132,13 +132,15 @@
             </div>
                     
         </section>
-                
+         
+        
         <p class="roda">A <span class="blod">Skin Perfect</span> é mais do que um site: é a união de <span class="blod">profissionais dedicados</span> e <span class="blod">apaixonados</span>, <span class="blod">trabalhando juntos</span> para tornar o cuidado com a pele algo <span class="blod">simples, acessível</span> e <span class="blod">inspirador.</span></p>
 
 
-        <div class="comentario">
+        <div class="comentario" id="bloco-comentarios">
 
-            <div class="bfundo">
+
+            <div class="bfundo um">
               <div class="blocob">
                   <div class="avlmedia">
                       <h4 class="star">⭐⭐⭐⭐</h4>
@@ -150,6 +152,7 @@
                </div>
             </div>
 
+
             <div class="bfundo">
                 <div class="superior">
                     <img src="img/imagem_sobre_nos/profile.png" alt="">
@@ -174,9 +177,9 @@
               <div class="blocobranco">
                  <p class="textob">Minha pele melhorou muito após começar a utilizar os produtos recomendados pela Skin Perfect.</p>
               </div>
-            </div>  
-
-            <div class="bfundo item1">
+            </div>
+            
+            <div class="bfundo">
                 <div class="superior">
                     <img src="img/imagem_sobre_nos/profile.png" alt="">
                     <h4 class="cliente">Juliana</h4>
@@ -187,14 +190,82 @@
               <div class="blocobranco">
                  <p class="textob">Minha pele melhorou muito após começar a utilizar os produtos recomendados pela Skin Perfect.</p>
               </div>
-            </div>  
+            </div>
+
+            <div class="bfundo">
+                <div class="superior">
+                    <img src="img/imagem_sobre_nos/profile.png" alt="">
+                    <h4 class="cliente">Juliana</h4>
+                    <div class="av">
+                        <p>⭐ 4.9</p>
+                    </div>
+                </div>
+              <div class="blocobranco">
+                 <p class="textob">Minha pele melhorou muito após começar a utilizar os produtos recomendados pela Skin Perfect.</p>
+              </div>
+            </div>
+
+            <div class="bfundo">
+                <div class="superior">
+                    <img src="img/imagem_sobre_nos/profile.png" alt="">
+                    <h4 class="cliente">Juliana</h4>
+                    <div class="av">
+                        <p>⭐ 4.9</p>
+                    </div>
+                </div>
+              <div class="blocobranco">
+                 <p class="textob">Minha pele melhorou muito após começar a utilizar os produtos recomendados pela Skin Perfect.</p>
+              </div>
+            </div>
+
+            <div class="bfundo">
+                <div class="superior">
+                    <img src="img/imagem_sobre_nos/profile.png" alt="">
+                    <h4 class="cliente">Juliana</h4>
+                    <div class="av">
+                        <p>⭐ 4.9</p>
+                    </div>
+                </div>
+              <div class="blocobranco">
+                 <p class="textob">Minha pele melhorou muito após começar a utilizar os produtos recomendados pela Skin Perfect.</p>
+              </div>
+            </div>
 
 
         </div>
 
+        <div class="profissionais">
+            <h3 id="profi1" class="titub'"><span class="titulo1">Profissionais</span> Destaques</h3>
+              <div class="prf">
+                  
+                <div class="separar">
+                    <img class="primg" src="img/imagem_sobre_nos/professor.jpg" alt="">
+                    <p>Instrutor <span class="blod">Mauricésar</span></p>
+                  </div>
+
+                  <div class="separar">
+                    <img class="primg" src="img/imagem_sobre_nos/images.png" alt="">
+                    <p><span class="blod">Senac </span>Arapiraca</p>
+                  </div>
+
+                  <div class="separar">
+                    <img class="primg" src="img/imagem_sobre_nos/Carrossel-Professora-Helena.jpg" alt="">
+                    <p>Instrutora <span class="blod">Tâmara</span></p>
+                  </div>
+              </div>
+
+
+        </div>
 
     </main>
     
+    
+
+
+
+
+
+
 
     <!-- Sóbre nós The And -->
 
@@ -307,7 +378,59 @@
                 root.style.setProperty('--visivel', 'block');
                 headerpos.style.justifyContent = 'center';
             }
-}       
+}
     </script>    
+
+    <!-- Rolagem Horizontal dos comentarios -->
+
+    <script>
+    const container = document.getElementById('bloco-comentarios');
+
+    if (container) {
+        
+        let targetScrollLeft = 0; 
+        let currentScrollLeft = container.scrollLeft; 
+        
+        const damping = 0.1; 
+        let isScrolling = false;
+
+        const smoothScroll = () => {
+            if (!isScrolling) return;
+
+            let delta = targetScrollLeft - currentScrollLeft;
+
+            if (Math.abs(delta) < 0.5) {
+                currentScrollLeft = targetScrollLeft;
+                container.scrollLeft = currentScrollLeft;
+                isScrolling = false; 
+            } else {
+                currentScrollLeft += delta * damping;
+                container.scrollLeft = currentScrollLeft;
+                requestAnimationFrame(smoothScroll);
+            }
+        };
+
+        container.addEventListener('wheel', (evento) => {
+            evento.preventDefault();
+            
+            targetScrollLeft += evento.deltaY;
+
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            if (targetScrollLeft < 0) {
+                targetScrollLeft = 0;
+            }
+            if (targetScrollLeft > maxScroll) {
+                targetScrollLeft = maxScroll;
+            }
+
+            if (!isScrolling) {
+                isScrolling = true;
+                requestAnimationFrame(smoothScroll);
+            }
+
+        }, { passive: false });
+    }
+    </script>
+
 </body>
 </html>

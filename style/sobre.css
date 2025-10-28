@@ -11,6 +11,22 @@ body{
     --cor-texto: #484848;
 }
 
+
+/* ISOLAMENTO DO STYLE.CSS */
+
+.sobrenosimg, 
+.sobrenosimg *, 
+.container, 
+.container *, 
+.roda, 
+.roda * {
+  all: unset;
+  all: revert;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+
 /* Cabeçalho */
 .sobrenosimg{
     width: 100%;
@@ -81,7 +97,7 @@ body{
     width: 200px;
     height: 3px;
     background-color: var(--cor-primaria);
-    bottom: -1px;
+    bottom: -5px;
 }
 
 .titulo-outro::after {left: 0;}
@@ -126,27 +142,34 @@ body{
 }
 
 /* Rodapé */
-.roda{
+.roda {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 3rem;
     color: var(--cor-secundaria);
+    margin: 1rem 10.7%;
+    font-size: 20px !important;
 }
-
-
 
 
 /* Bloco de comentarios */
 
 
 .comentario{
-    margin: 80px auto;
-    max-width: 900px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    max-width: 86%;
     display: flex;
-    overflow: auto;
+    overflow-x: auto;
 }
+
 
 .comentario::-webkit-scrollbar{
     width: 0;
+    scrollbar-width: none;
+    display: none;
+    cursor: all-scroll;
 }
 
 .comentario .bfundo{
@@ -155,13 +178,16 @@ body{
     background: linear-gradient(#EBC7B8, #DE908D);
     margin-right: 10px;
     border-radius: 23px;
+}
+
+.um{
     display: flex;
 }
 
 .blocob{
     height: 91%;
     margin: 0.45rem;
-    background: white;
+    background: var(--cor-fundo);
     border-radius: 18px;
     text-align: center;
 }
@@ -174,6 +200,72 @@ body{
     margin: 10px;
     margin-top: 0.5rem;
     font-size: 15px;
+}
+
+.superior{
+    display: flex;
+    margin: 10px 10px;
+    align-items: center;
+}
+
+.superior img{
+    max-width: 32px;
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+.cliente {
+    margin-left: 0.5rem
+}
+
+.av{
+    margin-left: auto;
+    margin-right: 0.04rem;
+    background: var(--cor-fundo);
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+
+.blocobranco{
+    background: var(--cor-fundo);
+    margin: 0.45rem;
+    border-radius: 18px;
+    padding: 0.5rem 0.8rem;
+    height: 63%;
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: rgba(236, 124, 116, 0.212);
+    text-decoration-thickness: 2px;
+}
+
+
+/*   Profissionais  */
+
+.profissionais{
+    margin: 5rem 11% 2rem;
+}
+
+#profi1{
+    text-align: center;
+    font-size: 25px !important;
+    margin-bottom: 3rem;
+}
+
+.prf{
+    justify-content: space-between;
+    gap: 2rem;
+    display: flex;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.primg{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border: solid 3px var(--cor-primaria);
+    border-radius: 50%;
 }
 
 
@@ -221,8 +313,20 @@ body{
     .titulo-lado {
         margin-left: 26%;
     }
-    
-    .roda{font-size: 12px;}
+
+    .roda{font-size: 13px !important;
+        margin: 1rem 1.5rem;
+    }
+
+    .comentario{
+        max-width: 93%;
+    }
+
+    .prf{
+    justify-content: center;
+    display: grid;
+    text-align: center;
+}
 
 }
 
@@ -261,8 +365,10 @@ body{
     .titulo-lado {
         margin-left: 26%;
     }
-    
-    .roda{font-size: 12px;}
+
+    .roda{font-size: 15px !important;
+    margin: 1rem 1rem;
+    }
 
 }
 
@@ -301,8 +407,8 @@ body{
     .titulo-lado {
         margin-left: 26%;
     }
-    
-    .roda{font-size: 14px;}
+
+    .roda{font-size: 16px !important;}
 
 }
 
@@ -341,7 +447,8 @@ body{
     .titulo-lado {
         margin-left: 32%;
     }
-    
-    .roda{font-size: 14px;}
+
+    .roda{font-size: 20px !important;
+        margin: 1rem 10.7%;}
 
 }
