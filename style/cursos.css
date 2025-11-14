@@ -88,7 +88,7 @@
   
   section[aria-label="Lista de cursos"]{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 22px;
     align-items: start;
   }
@@ -130,7 +130,7 @@
     object-fit: cover;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     overflow: hidden;
-    width: 300px;
+    
   }
   
   
@@ -146,6 +146,8 @@
     color: #475569;
     line-height: 1.4;
     margin-top: 4px;
+    text-align: justify;
+    padding: 10px;
   }
   
   
@@ -210,7 +212,6 @@
   
   @media (max-width: 420px){
     .container { padding: 14px; }
-    .model_card img { max-width: 200px; }
     .model_card h2 { font-size: 1.02rem; }
     .card-footer { padding: 10px 12px; }
     .btn { padding: 8px 12px; min-width: 90px; font-size: 0.95rem; }
