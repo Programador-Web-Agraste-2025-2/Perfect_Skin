@@ -1,0 +1,205 @@
+*,
+*::before, /* Aplica box-sizing a todos os elementos e pseudo-elementos */
+*::after {box-sizing: border-box;} /* Inclui bordas e espaçamentos no tamanho total dos elementos */
+/* ======================== GERAIS ======================== */
+html, body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #4b2c25;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+/* ======================== MENU LATERAL ======================== */
+.menu-lateral {
+  position: relative;
+  top: 0;
+  height: auto;    /* AGORA FUNCIONA EM QUALQUER TAMANHO */
+  min-height: 300vh;   /* no mínimo a altura da tela */
+  width: 240px;
+  background-color: #b36a5e;
+  color:#fff;
+  padding: 20px;
+  overflow-y: auto;             /* Scroll apenas no menu */
+  scrollbar-width: thin;
+  scrollbar-color: #4b2c25 #dba79b;
+}
+
+
+/* Scrollbar Chrome */
+.menu-lateral::-webkit-scrollbar {
+  width: 8px;
+}
+.menu-lateral::-webkit-scrollbar-track {
+  background: #dba79b;
+  border-radius: 10px;
+}
+.menu-lateral::-webkit-scrollbar-thumb {
+  background-color: #4b2c25;
+  border-radius: 10px;
+}
+
+.menu-lateral h3 {
+  font-size: 16px;
+  margin-top: 20px;
+  background-color: #4b2c25;
+  padding: 8px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lateral li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 6px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-lateral li:hover {
+  background-color: #a3574b;
+}
+
+.seta {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4b2c25;
+}
+
+
+/* ======================== CONTEÚDO ======================== */
+.conteudo {
+  margin-left: 0;     /* remover compensação usada para menu fixo */
+  padding: 40px;
+  flex: 1;            /* ocupa o resto da tela */
+}
+
+.descricao,
+.modo-uso {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.descricao h4,
+.modo-uso h4 {
+  background-color: #8F5553;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.texto-descricao {
+  margin-top: 25px;
+  line-height: 1.5;
+  font-size: 14px;
+  color: #4b2c25;
+}
+
+/* ======================== IMAGENS ======================== */
+.imagem-flutuante-produto,
+.imagem-flutuante-uso {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+  margin: 20px auto;
+}
+
+
+/* ======================== RESPONSIVIDADE ======================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+  .menu-lateral {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  .conteudo {
+    margin-left: 0;
+    padding: 25px;
+  }
+
+  .imagem-flutuante-uso {
+    float: none;
+    margin: 20px auto;
+    max-width: 90%;
+  }
+}
+
+/* Celulares médios (até 768px) */
+@media (max-width: 768px) {
+
+  .menu-lateral {
+    padding: 15px;
+  }
+
+  .menu-lateral li {
+    font-size: 13px;
+  }
+
+  .descricao,
+  .modo-uso {
+    padding: 20px;
+  }
+
+  .conteudo {
+    gap: 30px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+  .menu-lateral h3 {
+    font-size: 13px;
+  }
+
+  .menu-lateral li {
+    font-size: 12px;
+  }
+
+  .descricao h4,
+  .modo-uso h4 {
+    font-size: 13px;
+  }
+
+  .conteudo {
+    padding: 15px;
+  }
+
+  .imagem-flutuante-uso,
+  .imagem-flutuante-produto {
+    max-width: 90%;
+    float: none;
+    margin: 15px auto;
+  }
+
+  .menu-lateral::-webkit-scrollbar {
+    width: 5px;
+  }
+}
