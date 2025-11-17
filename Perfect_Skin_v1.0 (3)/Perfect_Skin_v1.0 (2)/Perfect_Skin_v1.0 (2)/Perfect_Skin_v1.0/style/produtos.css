@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
+html, body{
+    height: 100%;
+}
+
+body {
+   
+
+  }
+  
+  .galeria-container {
+    padding: 20px 20px; /* Espaçamento interno */
+    max-width: 1000px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 80%; /* ocupa 80% da largura da tela */
+    padding: 2rem; /* padding relativo ao tamanho da fonte */
+    font-family: 'Segoe UI', sans-serif; /* Fonte padrão */
+    background-color: #ffffff; /* cor de fundo clara */
+  }
+  
+  .subtitulo {
+    color: #c4c4c4; /* Cor do subtítulo */
+    font-size: 14px; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Espaçamento inferior */
+  }
+  
+  .barra-titulo {
+    background-color: #2e2320; /* cor de fundo da barra */
+    height: 30px; /* altura da barra */
+    margin-bottom: 30px; /* Espaçamento inferior */
+  }
+  
+  .produtos-grid {
+    display: grid; /* Layout em grade */
+    gap: 1rem; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(4, 1fr);  /* 4 colunas padrão */
+    cursor: pointer; /* muda o cursor ao passar sobre os produtos */
+  }
+
+@media(max-width: 1200px){
+    .produtos-grid{grid-template-columns: repeat(4, 1fr);} /* 4 colunas para telas grandes */
+}
+    .botao{grid-template-columns: repeat(4, 1fr);} /* 4 colunas para telas grandes */
+
+@media(max-width: 992px){
+    .produtos-grid{grid-template-columns: repeat(3, 1fr);} /* 3 colunas para tablets */
+}
+    .botao{grid-template-columns: repeat(3, 1fr);} /* 3 colunas para tablets */
+
+@media(max-width: 680px){
+    .produtos-grid{grid-template-columns: repeat(2, 1fr);} /* 2 colunas para celulares grandes */
+}
+    .botao{grid-template-columns: repeat(2, 1fr);} /* 2 colunas para celulares grandes */
+    
+@media(max-width: 420px){
+    .produtos-grid{grid-template-columns: repeat 1fr;} /* 1 coluna para celulares pequenos */
+}
+    .botao{grid-template-columns: repeat 1fr;} /* 1 coluna para celulares pequenos */
+
+  .produto {
+    background-color: #e3c4b6; /* Cor de fundo */
+    padding: 20px 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    transition: transform 0.2s ease-in-out; /* Transição suave */
+    border: 2px double #6b4b3e; /* exemplo de borda com estilo */
+  }
+  
+  .produto img {
+    width: 100%; /* Largura total do contêiner */
+    max-width: 130px; /* Largura máxima */
+    height: 80%; /* Altura automática */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    border-radius: 8px; /* Bordas arredondadas */
+    object-fit: cover;  /* preenche sem distorcer */
+    object-position: center; /* centraliza a imagem */
+  }
+
+  .botao{
+    background: linear-gradient(#DF7E7A, #B76A66) ; /* Gradiente de cor */
+    font-weight: 600; /* Negrito */
+    font-size: 15px; /* Tamanho da fonte */
+    padding:0 1px; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    margin: 0; /* Remove margem */
+
+  }
+  
+  .produto a{
+    display: block; /* Exibição em bloco */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+  }
+  
+  .produto:hover {
+    transform: translateY(-6px);  /* efeito de elevação */ 
+    box-shadow: 0 14px 32px rgba(2, 8, 23, 0.15); /* Sombra mais intensa ao passar o mouse */
+  }
