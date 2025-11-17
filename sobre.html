@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link  href="{{ url_for('static', filename='style.css')}}">
-    <link  href="{{ url_for('static', filename='sobre.css')}}">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='sobre.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -95,7 +95,7 @@
         <section class="container">
             <div class="bloco item-1">
                 <div class="logo">
-                <img class="hv" src="./img/imagem_sobre_nos/logo.png" alt="">
+                <img class="hv" src="{{ url_for('img', filename='imagem_sobre_nos/logo.png') }}" alt="">
                 </div>
             </div>     
 
@@ -114,13 +114,13 @@
 
             <div class="bloco item-4">
                 <div class="fotos">
-                <img class="hv um" src="./img/imagem_sobre_nos/girls.jpg" alt="">
+                <img class="hv um" src="{{ url_for('img', filename='imagem_sobre_nos/girls.jpg') }}" alt="">
                 </div>
             </div>
             
             <div class="bloco item-5">
                 <div class="fotos">
-                <img class="hv um" src="./img/imagem_sobre_nos/senacal.jpg" alt="">
+                <img class="hv um" src="{{ url_for('img', filename='imagem_sobre_nos/senacal.jpg') }}" alt="">
                 </div>
             </div>    
 
@@ -155,7 +155,7 @@
 
             <div class="bfundo">
                 <div class="superior">
-                    <img src="img/imagem_sobre_nos/profile.png" alt="">
+                    <img src="{{ url_for('img', filename='imagem_sobre_nos/profile.png') }}" alt="">
                     <h4 class="cliente">Juliana</h4>
                     <div class="av">
                         <p>⭐ 4.9</p>
@@ -168,7 +168,7 @@
 
             <div class="bfundo">
                 <div class="superior">
-                    <img src="img/imagem_sobre_nos/profile.png" alt="">
+                    <img src="{{ url_for('img', filename='imagem_sobre_nos/profile.png') }}" alt="">
                     <h4 class="cliente">Juliana</h4>
                     <div class="av">
                         <p>⭐ 4.9</p>
@@ -181,7 +181,7 @@
             
             <div class="bfundo">
                 <div class="superior">
-                    <img src="img/imagem_sobre_nos/profile.png" alt="">
+                    <img src="{{ url_for('img', filename='imagem_sobre_nos/profile.png') }}" alt="">
                     <h4 class="cliente">Juliana</h4>
                     <div class="av">
                         <p>⭐ 4.9</p>
@@ -194,7 +194,7 @@
 
             <div class="bfundo">
                 <div class="superior">
-                    <img src="img/imagem_sobre_nos/profile.png" alt="">
+                    <img src="{{ url_for('img', filename='imagem_sobre_nos/profile.png') }}" alt="">
                     <h4 class="cliente">Juliana</h4>
                     <div class="av">
                         <p>⭐ 4.9</p>
@@ -207,7 +207,7 @@
 
             <div class="bfundo">
                 <div class="superior">
-                    <img src="img/imagem_sobre_nos/profile.png" alt="">
+                    <img src="{{ url_for('img', filename='imagem_sobre_nos/profile.png') }}" alt="">
                     <h4 class="cliente">Juliana</h4>
                     <div class="av">
                         <p>⭐ 4.9</p>
@@ -220,7 +220,7 @@
 
             <div class="bfundo">
                 <div class="superior">
-                    <img src="img/imagem_sobre_nos/profile.png" alt="">
+                    <img src="{{ url_for('img', filename='imagem_sobre_nos/profile.png') }}" alt="">
                     <h4 class="cliente">Juliana</h4>
                     <div class="av">
                         <p>⭐ 4.9</p>
@@ -239,17 +239,17 @@
               <div class="prf">
                   
                 <div class="separar">
-                    <img class="primg" src="img/imagem_sobre_nos/professor.jpg" alt="">
+                    <img class="primg" src="{{ url_for('img', filename='imagem_sobre_nos/professor.jpg') }}" alt="">
                     <p>Instrutor <span class="blod">Mauricésar</span></p>
                   </div>
 
                   <div class="separar">
-                    <img class="primg" src="img/imagem_sobre_nos/images.png" alt="">
+                    <img class="primg" src="{{ url_for('img', filename='imagem_sobre_nos/images.png')}}" alt="">
                     <p><span class="blod">Senac </span>Arapiraca</p>
                   </div>
 
                   <div class="separar">
-                    <img class="primg" src="img/imagem_sobre_nos/Carrossel-Professora-Helena.jpg" alt="">
+                    <img class="primg" src="{{ url_for('img', filename='imagem_sobre_nos/Carrossel-Professora-Helena.jpg')}}" alt="">
                     <p>Instrutora <span class="blod">Tâmara</span></p>
                   </div>
               </div>
