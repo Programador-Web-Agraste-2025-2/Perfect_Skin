@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Questionario</title>
-  <link rel="stylesheet" href="./style/quiz1.css">
+  <link href="{{ url_for('static', filename='quiz1.css') }}">
 </head>
 <body>
   <header>
-    <img src="./img/imagem_quiz/skincare.png" alt="Logo" class="logo">
+    <img src="{{ url_for('img/', filename='imagem_quiz/skincare.png')}}" alt="" class="logo">
     <hr>
     <div class="titulo">
       <h2 class="pg">Qual é sua principal preocupação com cuidados com a pele?</h2>
@@ -45,7 +45,7 @@
 
   <footer class="prx">
     <button id="proximo">
-      <a href="quiz2.html" target="_self" rel="next">próximo →</a>
+      <a href="{{ url_for('templates', filename='quiz2.html') }}" target="_self" rel="next">próximo →</a>
     </button>
   </footer>
 </body>
