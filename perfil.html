@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfect Skin</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/perfil.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='perfil.css') }}">
 
 </head>
 <body>
@@ -83,7 +82,7 @@
   <main class="perfil-container">
     <section class="perfil-card">
       <div class="foto-perfil">
-        <img src="./img/Imagem_Perfil/img1.png" alt="Foto de perfil">
+        <img src="{{ url_for('img/Imagem_Perfil', filename='img1.webp" alt="Limpeza facial">
         <button class="editar-foto">Editar Foto</button>
       </div>
   
@@ -102,21 +101,21 @@
           <h4>Limpeza</h4>
           <p>Use um sabonete facial suave, sem álcool, duas vezes ao dia.</p>
           <div class="img-container">
-            <img src="./img/Imagem_Perfil/img2.webp" alt="Limpeza facial">
+            <img src="{{ url_for('img/Imagem_Perfil', filename='img2.webp" alt="Limpeza facial">
           </div>
         </div>
         <div class="card">
           <h4>Hidratação</h4>
           <p>Aplique um hidratante para manter a pele macia.</p>
           <div class="img-container">
-            <img src="./img/Imagem_Perfil/img3.webp" alt="Hidratação">
+            <img src="{{ url_for('img/Imagem_Perfil', filename='img3.webp" alt="Hidratação">
           </div>
         </div>
         <div class="card">
           <h4>Proteção Solar</h4>
           <p>Use protetor solar FPS 50 todos os dias, mesmo em ambientes internos.</p>
           <div class="img-container">
-            <img src="./img/Imagem_Perfil/img4.webp" alt="Protetor solar">
+            <img src="{{ url_for('img/Imagem_Perfil', filename='img4.webp" alt="Protetor solar">
           </div>
         </div>
       </div>
