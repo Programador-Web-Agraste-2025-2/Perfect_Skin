@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pag6</title>
-  <link rel="stylesheet" href="./style/quiz6.css">
+  <link href="{{ url_for('static', filename='quiz6.css') }}">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'rel='stylesheet'>
 </head>
-<body>
+<body id = 'esse'>
   <header>
-    <img src="./img/imagem_quiz/skincare.png" alt="Logo" class="logo">
+    <img src="{{ url_for('img/', filename='imagem_quiz/skincare.png')}}" alt="" class="logo">
     <hr>
     <div class="titulo">
       <h2 class="pg">Gostaria de receber sua rotina de cuidados com a pele no seu e-mail?</h2>
@@ -41,7 +41,7 @@
 
   <footer class="prx">
     <button id="proximo">
-      <a href="quiz7.html" target="_self" rel="next">próximo →</a>
+      <a <a href="{{ url_for('templates', filename='quiz7.html') }}"  target="_self" rel="next">próximo →</a>
     </button>
   </footer>
 </body>

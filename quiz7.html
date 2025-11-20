@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pag7</title>
-    <link rel="stylesheet" href="./style/quiz7.css">
+    <link href="{{ url_for('static', filename='quiz7.css') }}">
 </head>
 <body> 
     <header>
-        <img src="./img/imagem_quiz/skincare.png" alt="" class="logo">
+        <img src="{{ url_for('img/', filename='imagem_quiz/skincare.png')}}" alt="" class="logo">
         <hr>
     </header>
     <section class="linha"></section>
     <div class="perguntas">
-        <button class="btn"><a href="cadastro.html" target="_self" rel="next">REGISTRE-SE</a></button>
+        <button class="btn"><a href="cadastro.html" target="_self" rel="next" class="link">REGISTRE-SE</a></button>
     </div>
     <div class="perguntas">
-        <button class="btn"><a href="login.html" target="_self" rel="next"></a>LOGIN</button>
+        <button class="btn"><a href="login.html" target="_self" rel="next" class="link">LOGIN</a></button>
     </div>
     <div class="bolinhas">
         <span class="bolinha1"></span>

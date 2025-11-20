@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pag4</title>
-    <link rel="stylesheet" href="./style/quiz4.css">
+    <link href="{{ url_for('static', filename='quiz4.css') }}">
 </head>
 
 <link rel="stylesheet" href="skincare.css">
 <body> 
     <header>
-        <img src="./img/imagem_quiz/skincare.png" alt="" class="logo">
+        <img src="{{ url_for('img/', filename='imagem_quiz/skincare.png')}}" alt="" class="logo">
         <hr>
     </header>
     <section class="linha"></section>
@@ -39,7 +39,7 @@
       </div>
 
     <footer class="prx">
-        <button id="proximo"> <a href="quiz5.html" target="_self" rel="next">próximo →</a></button>
+        <button id="proximo"> <a href="{{ url_for('templates', filename='quiz5.html') }}"  target="_self" rel="next">próximo →</a></button>
     </footer>
 </body>
 </html>
