@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pag5</title>
-    <link rel="stylesheet" href="./style/quiz5.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz5.css') }}">
 </head>
 <body> 
     <header>
-        <img src="./img/imagem_quiz/skincare.png" alt="" class="logo">
+        <img src="{{ url_for('static', filename='img/skincare.png') }}" alt="">
         <hr>
     </header>
     <section class="linha"></section>
@@ -34,7 +34,9 @@
       </div>
 
     <footer class="prx">
-        <button id="proximo"> <a href="quiz6.html" target="_self" rel="next">próximo →</a></button>
+        <button id="proximo">
+            <a href="{{ url_for('quiz6') }}" target="_self" rel="next">próximo →</a>
+        </button>
     </footer>
 </body>
 </html>
