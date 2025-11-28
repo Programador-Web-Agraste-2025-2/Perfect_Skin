@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pag7</title>
-    <link rel="stylesheet" href="./style/quiz7.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz7.css') }}">
 </head>
 <body> 
     <header>
-        <img src="./img/imagem_quiz/skincare.png" alt="" class="logo">
+        <img src="{{ url_for('static', filename='img/skincare.png') }}" alt="">
         <hr>
     </header>
     <section class="linha"></section>
