@@ -1,0 +1,242 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@100..900&display=swap');
+
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html,body,main{
+    overflow-x: hidden;
+    font-family: 'Noto Sans Lao',Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --degrade: linear-gradient(to right, #df7e7a 0%,#B76A66 33%,#B96B67 66%,#8F5553 100%);
+    --borda-degrade:#B76A66;
+    --fonte-clara: #ffffff;
+    --font-texto: #000000;
+    --cabeca-rodape: #28211e;
+    --visivel: none;
+    
+
+}
+
+/*
+    HEADER START
+*/
+
+.headercontainer{
+    background-color: var(--cabeca-rodape);
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+#headermob{display:block; height:60px}
+
+
+
+#headermenu{ 
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: #000000c2;
+    margin-top: 10px;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+#buttonlogins{ 
+    margin: 20px;
+    width: 270px;
+    font-size: clamp(0.85em,1vw,1.5em);
+    
+    
+}
+
+
+header li{list-style: none;}
+header nav a{ 
+    display: var(--visivel);
+    /*border: 1px solid white;*/
+    border-radius: 10p;
+    font-size: clamp(0.85em,1vw,1.5em);
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #00000050;
+    width: 310px;
+    
+}
+
+header nav a:hover{
+    background-color: #ffffff10;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.headerfullbutton{
+    text-decoration: none;
+    background-image: var(--degrade);
+    color: var(--fonte-clara);
+    height: 2px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 16px;
+    border: solid 1px #B76A66;
+    text-shadow: 2px 2px  #00000050;
+}
+
+#headerbuttonentrar{ 
+    background-image: none;
+    border-radius: 5px;
+
+}
+
+@media screen and (max-width: 600px){   
+    #headerdesktop{display: var(--visivel);}
+    #headermenuul{display: var(--visivel);}
+    #buttonlogins{display: var(--visivel);}
+    #headermob{
+     width: 250px;
+     height:84px}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 999px){ 
+    #headernav{
+        order:2;
+    }
+}
+
+
+
+@media screen and (min-width: 1000px){   
+    #headermob{width: 350px;}
+    #headermenu{display: none;}
+    .headercontainer{
+        flex-wrap: nowrap;
+        justify-content: space-between; 
+    }
+    header ul{display:flex;
+        flex-flow: row wrap;
+        width: calc(100vw - 700px);
+        justify-content: center;
+           
+    }
+    header nav a{
+        display: inline;
+        background-color: var(--cabeca-rodape);
+        width: 100vw;
+        margin-inline: clamp(0.85em,1vw,1.5em);
+    }
+}
+
+
+
+/*
+    HEADER END
+*/
+
+
+
+/*
+    FOOTER START
+*/
+
+
+
+
+a:hover{text-decoration: underline;}
+
+.rodapeupper a{display: block;}
+
+span{font-size: clamp(0.85em,1vw,1.5em);}
+
+#redesociais{
+    font-weight: bolder;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid white;
+}
+
+footer a { margin: 5px;}
+
+footer h1{ font-size: clamp(1em, 10vw, 2em);}
+
+#footercontainer{
+    display: grid;
+    grid-template: repeat(2,1fr) / repeat(3,1fr);
+    background-color: #28211e;    
+    height: 100vh;
+    max-height: 500px;
+    place-content: center center;
+    place-items: center center;
+}
+
+.setor1{background-image: linear-gradient(to bottom, #E5BDAD, #c87d60d7);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+
+}
+.setor1 a {display: block; text-decoration: none;color:black}
+.setor2 *{color:white; text-align: center;}
+
+
+#footermob{
+    display:block;
+    min-width: 32px;
+    width: 30vw;
+    max-width: 350px;
+
+}
+.social{ margin-inline: 40px;}
+
+
+@media screen and (max-width:700px) {
+    #footercontainer{
+     grid-template: repeat(6,1fr) / repeat(1,1fr);
+     min-height:1000px;
+     height: 150vh;
+     max-height: 150vh;
+    }
+
+    .case{padding: 20px 10px;}
+
+    #footermob{ width: 300px;}
+
+    .setor1{background-image: linear-gradient(to right, #E5BDAD, #c87d60d7);
+    }
+
+    .cel4{
+        grid-area: -3/1/-2/-1;
+    }
+
+    .cel5{
+        grid-area: -2/1/-1/-1;
+    }
+}
+
+/*
+    FOOTER START
+*/
+
+
+
